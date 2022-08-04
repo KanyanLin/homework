@@ -1,10 +1,14 @@
+*,*::before,*::after {
+    box-sizing: border-box;
+}
+
 body {
     color: #4e4e4e;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .main {
-    width: 1002px;
+    max-width: 1002px;
     margin: 0 auto;
 }
 
@@ -31,9 +35,6 @@ body {
 }
 
 .title {
-    /* display: flex;
-    justify-content: space-between;
-    align-items: flex-end; */
     position: relative;
 }
 
@@ -41,8 +42,7 @@ body {
     display: flex;
 }
 
-.title a,
-li {
+.title a,li {
     color: #00cc99;
     line-height: 50px;
     font-weight: bold;
@@ -78,10 +78,6 @@ li {
 }
 
 .banner {
-    /* background-image: url(../images/banner.png);
-    height: 346px;
-    display: flex;
-    align-items: center; */
     position: relative;
     overflow: hidden;
 }
@@ -103,12 +99,13 @@ li {
 .intro {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     margin-top: 60px;
     margin-bottom: 60px;
 }
 
 .intro div {
-    width: 260px;
+    width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -141,8 +138,7 @@ li {
 }
 
 .table table {
-    width: 840px;
-    font-weight: normal;
+    width: 80%;
 }
 
 .table th {
@@ -150,8 +146,7 @@ li {
     text-align: left;
 }
 
-.table th,
-td {
+.table th,td {
     padding-top: 10px;
     padding-bottom: 10px;
     border-top: 1px solid #dddddd;
@@ -160,6 +155,7 @@ td {
 
 .table .mark {
     color: #00a67d;
+    font-weight: bold;
 }
 
 .form {
@@ -184,10 +180,12 @@ td {
 
 .form .contact .left {
     width: 50%;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .form .contact .left textarea {
-    width: 90%;
+    width: 100%;
     border-radius: 3px;
     border: 0;
     outline: none;
@@ -198,10 +196,12 @@ td {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .form .contact .right input[type=text] {
-    width: 90%;
+    width: 100%;
     height: 30px;
     border-radius: 3px;
     border: 0;
@@ -218,7 +218,6 @@ td {
     border-radius: 3px;
     cursor: pointer;
     align-self: flex-end;
-    margin-right: 44px;
 }
 
 .footer {
